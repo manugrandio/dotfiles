@@ -1,0 +1,8 @@
+[ui]
+verbose = True
+merge = vimdiff
+style = compact
+
+[extensions]
+record=
+hgext.churn=

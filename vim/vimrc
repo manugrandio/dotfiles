@@ -1,0 +1,70 @@
+execute pathogen#infect()
+
+syntax on
+set tabstop=8 expandtab shiftwidth=4 softtabstop=4
+set number
+set backspace=indent,eol,start
+set autoindent
+set smartindent
+set smarttab
+set history=200
+colorscheme peachpuff
+
+" Switch buffers without saving
+set hidden
+
+" Better search
+set hlsearch
+set incsearch
+
+" Keep swap files in a single location
+set backupdir=~/.vim/sessions
+set dir=~/.vim/sessions
+
+" Remember cursor position
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+" Save current view settings on a per-window, per-buffer basis.
+function! AutoSaveWinView()
+    if !exists("w:SavedBufView")
+        let w:SavedBufView = {}
+    endif
+    let w:SavedBufView[bufnr("%")] = winsaveview()
+endfunction
+
+" Restore current view settings.
+function! AutoRestoreWinView()
+    let buf = bufnr("%")
+    if exists("w:SavedBufView") && has_key(w:SavedBufView, buf)
+        let v = winsaveview()
+        let atStartOfFile = v.lnum == 1 && v.col == 0
+        if atStartOfFile && !&diff
+            call winrestview(w:SavedBufView[buf])
+        endif
+        unlet w:SavedBufView[buf]
+    endif
+endfunction
+
+" When switching buffers, preserve window view.
+if v:version >= 700
+    autocmd BufLeave * call AutoSaveWinView()
+    autocmd BufEnter * call AutoRestoreWinView()
+endif
+
+" File type settings
+filetype plugin on
+autocmd FileType python setlocal textwidth=79 tabstop=8 expandtab shiftwidth=4 softtabstop=4
+autocmd FileType xml,html setlocal shiftwidth=2 softtabstop=2
+autocmd FileType markdown setlocal textwidth=80
+
+" Custom mappings
+
+" Arrow keys move visible lines
+inoremap <Down> <C-R>=pumvisible() ? "\<lt>Down>" : "\<lt>C-O>gj"<CR>
+inoremap <Up> <C-R>=pumvisible() ? "\<lt>Up>" : "\<lt>C-O>gk"<CR>
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+
+nnoremap Y y$
