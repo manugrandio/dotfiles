@@ -57,7 +57,6 @@ endif
 filetype plugin on
 autocmd FileType python setlocal textwidth=79 tabstop=8 expandtab shiftwidth=4 softtabstop=4
 autocmd FileType xml,html setlocal shiftwidth=2 softtabstop=2
-autocmd FileType markdown setlocal textwidth=80
 
 " Custom mappings
 
