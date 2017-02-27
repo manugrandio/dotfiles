@@ -55,11 +55,8 @@ endif
 
 " File type settings
 filetype plugin on
-autocmd FileType python setlocal textwidth=79 tabstop=8 expandtab shiftwidth=4 softtabstop=4
+autocmd FileType python setlocal textwidth=79 tabstop=8 expandtab shiftwidth=4 softtabstop=4 cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType xml,html,css setlocal shiftwidth=2 softtabstop=2 expandtab softtabstop=2
-
-" In Python, indent after class and def statements.
-filetype plugin indent on
 
 " Custom mappings
 
