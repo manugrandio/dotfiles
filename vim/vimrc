@@ -2,7 +2,7 @@ execute pathogen#infect()
 
 syntax on
 set tabstop=8 expandtab shiftwidth=4 softtabstop=4
-set number
+set relativenumber
 set ruler
 set wildmenu
 set backspace=indent,eol,start
@@ -65,7 +65,7 @@ endif
 filetype plugin on
 autocmd FileType python setlocal textwidth=100 tabstop=8 expandtab shiftwidth=4 softtabstop=4 cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 expandtab softtabstop=2
-autocmd FileType xml,html,css,scss setlocal shiftwidth=2 softtabstop=2 expandtab softtabstop=2
+autocmd FileType xml,html,htmldjango,css,scss setlocal shiftwidth=2 softtabstop=2 expandtab softtabstop=2
 autocmd FileType coffee setlocal textwidth=100 tabstop=8 expandtab shiftwidth=2 softtabstop=2
 
 " Custom mappings
@@ -80,7 +80,6 @@ vnoremap <Up> gk
 
 nnoremap Y y$
 
-" Invoke fzf
-nnoremap <C-p> :<C-u>FZF<CR>
-
-command Test !python3 -m unittest -v %
+" Insert current date
+nnoremap <F4> "=strftime("%Y-%m-%d")<CR>P
+inoremap <F4> <C-R>=strftime("%Y-%m-%d")<CR>
