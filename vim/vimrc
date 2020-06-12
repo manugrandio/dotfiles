@@ -26,6 +26,10 @@ set dir=~/.vim/sessions
 " FZF integration
 set rtp+=~/.fzf
 
+" For faster refresh of gitgutter
+set updatetime=100
+set signcolumn=yes
+
 " NERDTree arrows
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
