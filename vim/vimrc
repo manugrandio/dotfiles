@@ -11,7 +11,6 @@ set smartindent
 set smarttab
 set history=200
 set nocompatible
-colorscheme darkblue
 
 " Switch buffers without saving
 set hidden
@@ -26,6 +25,10 @@ set dir=~/.vim/sessions
 
 " FZF integration
 set rtp+=~/.fzf
+
+" For faster refresh of gitgutter
+set updatetime=100
+set signcolumn=yes
 
 " NERDTree arrows
 let g:NERDTreeDirArrowExpandable = '▸'

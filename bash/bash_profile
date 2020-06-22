@@ -1,19 +1,20 @@
-source ~/.bashrc
+[ -f ~/.bashrc ] && source ~/.bashrc
 
 set -o vi
 
 export EDITOR=vim
 export PYTHONSTARTUP=~/.pythonstartup.py
-export PS1="\[\e[32m\]\u\[\e[m\]@\[\e[34m\]\h\[\e[m\]:\[\e[33m\]\w\[\e[m\]$ "
+export PS1="\[\e[34m\]\u:\w\\$\[\e[m\] "
 export HISTSIZE=10000
 
 alias activate='source .venv/bin/activate'
 
-if [ -d "$HOME/bin" ] ; then
-    PATH="$PATH:$HOME/bin"
-fi
+[ -f ~/.git-completion.bash ] && source ~/.git-completion.bash
 
-source ~/.git-completion.bash
+# Add ~/bin scripts to $PATH
+if [ -d "$HOME/bin" ] ; then
+  PATH="$PATH:$HOME/bin"
+fi
 
 export FZF_DEFAULT_COMMAND='fd --type f'
 
@@ -25,4 +26,8 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # Setting PATH for Python 3.8
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
+
+# Setting PATH for Python 3.7
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 export PATH
