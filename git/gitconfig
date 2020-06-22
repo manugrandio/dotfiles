@@ -7,5 +7,3 @@
   type = cat-file -t
   dump = cat-file -p
   quick-stats = ! /usr/local/bin/git-quick-stats
-[init]
-  templatedir = ~/projects/utils/git_template/

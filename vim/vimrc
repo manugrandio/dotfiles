@@ -25,7 +25,7 @@ set backupdir=~/.vim/sessions
 set dir=~/.vim/sessions
 
 " FZF integration
-set rtp+=/usr/local/opt/fzf
+set rtp+=~/.fzf
 
 " NERDTree arrows
 let g:NERDTreeDirArrowExpandable = '▸'

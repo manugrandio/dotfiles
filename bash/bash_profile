@@ -9,17 +9,11 @@ export HISTSIZE=10000
 
 alias activate='source .venv/bin/activate'
 
+if [ -d "$HOME/bin" ] ; then
+    PATH="$PATH:$HOME/bin"
+fi
+
 source ~/.git-completion.bash
-
-# Setting PATH for Python 3.7
-# The original version is saved in .bash_profile.pysave
-# PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}:/Users/manu/Library/Python/3.7/bin:/Users/manu/bin:/Users/manu/.npm-packages/bin"
-# export PATH
-
-# Setting PATH for Python 3.6
-# The original version is saved in .bash_profile.pysave
-# PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
-# export PATH
 
 export FZF_DEFAULT_COMMAND='fd --type f'
 
@@ -27,3 +21,8 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Setting PATH for Python 3.8
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
+export PATH
