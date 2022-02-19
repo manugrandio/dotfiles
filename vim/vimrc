@@ -68,7 +68,7 @@ endif
 " File type settings
 filetype plugin on
 autocmd FileType python setlocal textwidth=100 tabstop=8 expandtab shiftwidth=4 softtabstop=4 cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 expandtab softtabstop=2
+autocmd FileType javascript,typescript,typescriptreact setlocal shiftwidth=2 softtabstop=2 expandtab softtabstop=2
 autocmd FileType xml,html,htmldjango,css,scss setlocal shiftwidth=2 softtabstop=2 expandtab softtabstop=2
 autocmd FileType coffee setlocal textwidth=100 tabstop=8 expandtab shiftwidth=2 softtabstop=2
 
