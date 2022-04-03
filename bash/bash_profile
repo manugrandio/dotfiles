@@ -36,3 +36,10 @@ export PATH
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:${PATH}"
 export PATH
+
+# Fixes ctags
+export PATH="/usr/local/bin:/usr/bin:$PATH"
+
+
+# TODO remove. It's temporary
+alias vim='echo Use vi instead'
