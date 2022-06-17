@@ -1,6 +1,13 @@
 execute pathogen#infect()
 
-syntax on
+syntax enable
+set background=dark
+colorscheme default
+" Workaround a problem with solarized and vim-gitgutter.
+" https://github.com/airblade/vim-gitgutter/issues/696
+highlight! link SignColumn LineNr
+autocmd ColorScheme * highlight! link SignColumn LineNr
+
 set tabstop=8 expandtab shiftwidth=4 softtabstop=4
 set number
 set relativenumber
@@ -12,7 +19,6 @@ set smartindent
 set smarttab
 set history=200
 set nocompatible
-colorscheme default
 
 " Switch buffers without saving
 set hidden
@@ -31,10 +37,6 @@ set rtp+=~/.fzf
 " For faster refresh of gitgutter
 set updatetime=100
 set signcolumn=yes
-
-" NERDTree arrows
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
 
 " Remember cursor position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
@@ -78,14 +80,11 @@ autocmd FileType coffee setlocal textwidth=100 tabstop=8 expandtab shiftwidth=2 
 " Arrow keys move visible lines
 inoremap <Down> <C-R>=pumvisible() ? "\<lt>Down>" : "\<lt>C-O>gj"<CR>
 inoremap <Up> <C-R>=pumvisible() ? "\<lt>Up>" : "\<lt>C-O>gk"<CR>
-nnoremap <Down> gj
-nnoremap <Up> gk
-vnoremap <Down> gj
-vnoremap <Up> gk
 
 nnoremap Y y$
 
 nmap <Leader>p :FZF<CR>
+nmap <Leader>d :Dash<CR>
 
 " Insert current date
 nnoremap <F4> "=strftime("%Y-%m-%d")<CR>P
