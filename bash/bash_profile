@@ -8,6 +8,7 @@ export HISTSIZE=10000
 
 alias activate='source .venv/bin/activate'
 alias vif='vi $(fzf)'
+alias git='LANG=en_US git'
 
 [ -f ~/.git-completion.bash ] && source ~/.git-completion.bash
 [ -f ~/.git-prompt.bash ] && source ~/.git-prompt.sh

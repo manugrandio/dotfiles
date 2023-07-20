@@ -33,6 +33,7 @@ set dir=~/.vim/sessions
 
 " FZF integration
 set rtp+=~/.fzf
+set rtp+=/opt/homebrew/opt/fzf
 
 " For faster refresh of gitgutter
 set updatetime=100
