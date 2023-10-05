@@ -87,6 +87,7 @@ nnoremap Y y$
 nmap <Leader>p :FZF<CR>
 nmap <Leader>f :Rg<CR>
 nmap <Leader>d :Dash<CR>
+nmap <Leader>t :!python3 -m unittest %<CR>
 
 " Insert current date
 nnoremap <F4> "=strftime("%Y-%m-%d")<CR>P
