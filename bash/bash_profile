@@ -22,6 +22,7 @@ fi
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
+export FZF_DEFAULT_OPTS='--layout=reverse'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
