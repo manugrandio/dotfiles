@@ -85,8 +85,18 @@ inoremap <Up> <C-R>=pumvisible() ? "\<lt>Up>" : "\<lt>C-O>gk"<CR>
 nnoremap Y y$
 
 nmap <Leader>p :FZF<CR>
+nmap <Leader>f :Rg<CR>
 nmap <Leader>d :Dash<CR>
 
 " Insert current date
 nnoremap <F4> "=strftime("%Y-%m-%d")<CR>P
 inoremap <F4> <C-R>=strftime("%Y-%m-%d")<CR>
+
+
+" vim-plug plugins section
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
