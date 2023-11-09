@@ -89,6 +89,8 @@ nmap <Leader>f :Rg<CR>
 nmap <Leader>l :Buffers<CR>
 nmap <Leader>d :Dash<CR>
 nmap <Leader>t :!python3 -m unittest %<CR>
+nmap <Leader>r :!python3 %<CR>
+nmap <Leader>j :%!python3 -m json.tool<CR>
 
 " Insert current date
 nnoremap <F4> "=strftime("%Y-%m-%d")<CR>P
@@ -103,3 +105,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 
 call plug#end()
+
+" Cheatsheet
+"
+" - `:Goyo`: focused writing

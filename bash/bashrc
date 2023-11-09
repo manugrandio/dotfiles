@@ -1,3 +1,5 @@
+# Remember to include `[ -f ~/.bashrc ] && source ~/.bashrc` in `.bash_profile`
+
 export EDITOR=vim
 export PS1="\[\e[34m\]\u:\w\\$\[\e[m\] "
 export HISTSIZE=10000
