@@ -10,11 +10,10 @@ alias git='LANG=en_US git'
 alias dc='docker compose'
 
 [ -f ~/.git-completion.bash ] && source ~/.git-completion.bash
-[ -f ~/.git-prompt.bash ] && source ~/.git-prompt.sh
 
 # Add ~/bin scripts to $PATH
 if [ -d "$HOME/bin" ] ; then
-  PATH="$PATH:$HOME/bin"
+  PATH="$PATH:$HOME/bin:$HOME/bin/diff-so-fancy"
 fi
 
 # Disable Catalina annoying warning about zsh:
