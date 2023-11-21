@@ -1,7 +1,5 @@
 # Install vim plugins and create sessions dir
 
-set -x
-
 mkdir -p ~/.vim/sessions
 
 # Pathogen plugins
