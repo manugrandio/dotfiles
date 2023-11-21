@@ -13,7 +13,7 @@ alias dc='docker compose'
 
 # Add ~/bin scripts to $PATH
 if [ -d "$HOME/bin" ] ; then
-  PATH="$PATH:$HOME/bin:$HOME/bin/diff-so-fancy"
+  PATH="$PATH:$HOME/bin"
 fi
 
 # Disable Catalina annoying warning about zsh:
