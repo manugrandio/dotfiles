@@ -1,0 +1,1 @@
+pass $(ls-password-store | fzf)
