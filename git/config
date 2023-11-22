@@ -12,3 +12,5 @@
 [user]
     email = manugrandio@fastmail.fm
     name = Manu Grandio
+[init]
+    defaultBranch = main
