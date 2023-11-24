@@ -8,3 +8,4 @@ mkdir -p ~/.config
 [ ! -e ~/.editrc ] && ln -s "$PWD/other/editrc" ~/.editrc
 [ ! -e ~/.tmux.conf ] && ln -s "$PWD/tmux/tmux.conf" ~/.tmux.conf
 [ ! -e ~/.vimrc ] && ln -s "$PWD/vim/vimrc" ~/.vimrc
+[ ! -e ~/.ctags ] && ln -s "$PWD/ctags/ctags" ~/.ctags
