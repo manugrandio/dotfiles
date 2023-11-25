@@ -116,3 +116,4 @@ call plug#end()
 " Cheatsheet
 "
 " - `:Goyo`: focused writing
+" - `:Flake`: run flake8 in current file and populate quickfix list with the errors
