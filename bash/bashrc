@@ -38,3 +38,6 @@ export PATH
 
 # Set up Python shell (Manu)
 export PYTHONSTARTUP=~/.pythonrc
+
+# In case you want to extend this base .bashrc
+[ -f ~/.bashrc_extended ] && source ~/.bashrc_extended
