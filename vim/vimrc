@@ -19,6 +19,7 @@ set smartindent
 set smarttab
 set history=200
 set nocompatible
+set nostartofline
 
 " Switch buffers without saving
 set hidden
@@ -39,36 +40,6 @@ set rtp+=/opt/homebrew/opt/fzf
 set updatetime=100
 set signcolumn=yes
 
-" Remember cursor position
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-
-" Save current view settings on a per-window, per-buffer basis.
-function! AutoSaveWinView()
-    if !exists("w:SavedBufView")
-        let w:SavedBufView = {}
-    endif
-    let w:SavedBufView[bufnr("%")] = winsaveview()
-endfunction
-
-" Restore current view settings.
-function! AutoRestoreWinView()
-    let buf = bufnr("%")
-    if exists("w:SavedBufView") && has_key(w:SavedBufView, buf)
-        let v = winsaveview()
-        let atStartOfFile = v.lnum == 1 && v.col == 0
-        if atStartOfFile && !&diff
-            call winrestview(w:SavedBufView[buf])
-        endif
-        unlet w:SavedBufView[buf]
-    endif
-endfunction
-
-" When switching buffers, preserve window view.
-if v:version >= 700
-    autocmd BufLeave * call AutoSaveWinView()
-    autocmd BufEnter * call AutoRestoreWinView()
-endif
-
 " File type settings
 filetype plugin on
 autocmd FileType python setlocal textwidth=100 tabstop=8 expandtab shiftwidth=4 softtabstop=4 cinwords=if,elif,else,for,while,try,except,finally,def,class,with
@@ -76,10 +47,6 @@ autocmd FileType javascript,typescript,typescriptreact setlocal shiftwidth=2 sof
 autocmd FileType xml,html,htmldjango,css,scss setlocal shiftwidth=2 softtabstop=2 expandtab softtabstop=2
 
 " Custom mappings
-
-" Arrow keys move visible lines
-inoremap <Down> <C-R>=pumvisible() ? "\<lt>Down>" : "\<lt>C-O>gj"<CR>
-inoremap <Up> <C-R>=pumvisible() ? "\<lt>Up>" : "\<lt>C-O>gk"<CR>
 
 nnoremap Y y$
 
@@ -96,8 +63,7 @@ nnoremap <F4> "=strftime("%Y-%m-%d")<CR>P
 inoremap <F4> <C-R>=strftime("%Y-%m-%d")<CR>
 
 
-" vim-plug automatic installation
-" source: " https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+" vim-plug automatic installation (source: https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation)
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
