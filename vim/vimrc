@@ -29,6 +29,9 @@ set hlsearch
 set incsearch
 
 " Keep swap files in a single location
+if empty(glob('~/.vim/sessions'))
+  silent execute '!mkdir -p ~/.vim/sessions'
+endif
 set backupdir=~/.vim/sessions
 set dir=~/.vim/sessions
 
