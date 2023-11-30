@@ -3,6 +3,7 @@
 
 # basictex installs pdflatex
 brew install --cask basictex
+brew install bat
 brew install ctags
 brew install fd
 brew install fzf
