@@ -1,11 +1,7 @@
-# Remember to include `[ -f ~/.bashrc ] && source ~/.bashrc` in `.bash_profile`
-
 export EDITOR=vim
 export PS1="\[\e[34m\]\u:\w\\$\[\e[m\] "
 export HISTSIZE=10000
 
-alias activate='source .venv/bin/activate'
-alias vif='vi $(fzf)'
 alias git='LANG=en_US git'
 alias dc='docker compose'
 # Don't use MacOS ctags. Use hombrew instead
@@ -18,14 +14,6 @@ if [ -d "$HOME/bin" ] ; then
   PATH="$PATH:$HOME/bin"
 fi
 
-# Disable Catalina annoying warning about zsh:
-export BASH_SILENCE_DEPRECATION_WARNING=1
-
-export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
-export FZF_DEFAULT_OPTS='--layout=reverse'
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 # Add brew to path
 PATH="/opt/homebrew/bin:${PATH}"
 
@@ -35,6 +23,14 @@ export PATH=$HOME/.local/bin:$PATH
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.11/bin:${PATH}"
 export PATH
+
+# Disable Catalina annoying warning about zsh:
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
+export FZF_DEFAULT_OPTS='--layout=reverse'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Set up Python shell (Manu)
 export PYTHONSTARTUP=~/.pythonrc
