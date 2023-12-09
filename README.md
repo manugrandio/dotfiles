@@ -2,6 +2,11 @@
 
 My dotfiles.
 
+## Requirements
+
+- [brew](https://brew.sh/)
+- Non-MacOS [Python](https://www.python.org/)
+
 ## How to install configs
 
 Run:
@@ -12,6 +17,7 @@ source setup-config-files.sh
 source install-scripts.sh
 source set-macos-config.sh # Untested!
 source install-vim-plugins.sh
+source install-python-packages.sh
 ```
 
 ## How to add new configs
