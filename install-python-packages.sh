@@ -7,4 +7,5 @@ python3 -m pip install \
     mkdocs \
     mypy \
     pipenv \
+    pre-commit \
     requests
