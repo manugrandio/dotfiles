@@ -1,1 +1,3 @@
+#!/bin/bash
+
 pass $(find $HOME/.password-store -type f -name \*.gpg | xargs -I % basename % .gpg | fzf)
