@@ -1,3 +1,5 @@
 #!/bin/bash
 
-curl https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore -o .gitignore
+cat <(curl https://raw.githubusercontent.com/github/gitignore/main/Global/macOS.gitignore) \
+    <(printf "\n") \
+    <(curl https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore) > .gitignore
