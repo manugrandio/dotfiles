@@ -1,0 +1,3 @@
+#!/bin/bash
+
+vim -c :Goyo -c ":set syntax:markdown" $@
