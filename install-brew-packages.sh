@@ -8,7 +8,6 @@ brew install ctags
 brew install fd
 brew install fzf
 brew install git
-brew install git-delta
 # glow is a markdown viewer
 brew install glow
 brew install gnupg
