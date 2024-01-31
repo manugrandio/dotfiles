@@ -9,4 +9,5 @@ python3 -m pip install \
     mypy \
     pipenv \
     pre-commit \
-    requests
+    requests \
+    sqlfluff
