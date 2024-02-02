@@ -53,8 +53,8 @@ autocmd FileType xml,html,htmldjango,css,scss setlocal shiftwidth=2 softtabstop=
 
 nnoremap Y y$
 
-nmap <Leader>p :FZF<CR>
-nmap <Leader>f :Rg<CR>
+nmap <Leader>p :FZF!<CR>
+nmap <Leader>f :Rg!<CR>
 nmap <Leader>l :Buffers<CR>
 nmap <Leader>d :Dash<CR>
 nmap <Leader>t :!python3 -m unittest %<CR>
