@@ -1,0 +1,4 @@
+#!/bin/bash
+# Inspired by: https://github.com/junegunn/fzf/wiki/examples#emoji
+
+echo $(cat utils/emojis.txt | fzf | cut -d ' ' -f 1)
