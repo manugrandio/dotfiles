@@ -1,5 +1,4 @@
 export EDITOR=vim
-export PS1="\[\e[34m\]\u:\w\\$\[\e[m\] "
 export HISTSIZE=10000
 
 alias git='LANG=en_US git'
@@ -8,6 +7,9 @@ alias dc='docker compose'
 alias ctags='/opt/homebrew/bin/ctags'
 
 [ -f ~/.git-completion.bash ] && source ~/.git-completion.bash
+[ -f ~/bin/git-prompt.sh ] && source ~/bin/git-prompt.sh
+
+PS1='\[\e[34m\]\u:\w$(__git_ps1 " (%s)")\$\[\e[m\] '
 
 # Add ~/bin scripts to $PATH
 if [ -d "$HOME/bin" ] ; then
