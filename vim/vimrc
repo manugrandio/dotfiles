@@ -60,6 +60,7 @@ nmap <Leader>d :Dash<CR>
 nmap <Leader>t :!python3 -m unittest %<CR>
 nmap <Leader>r :!python3 %<CR>
 nmap <Leader>j :%!python3 -m json.tool<CR>
+nmap <Leader>c :Rg! <C-R><C-W><CR>
 
 " Initialize fzf.vim configuration dictionary
 let g:fzf_vim = {}
