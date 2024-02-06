@@ -1,0 +1,10 @@
+#!/bin/bash
+# keep track of your to-dos per branch per respository
+
+branch=$(git branch --show-current | tr / -)
+repo=$(basename "$(git rev-parse --show-toplevel)")
+directory="$HOME/todo/$repo/$branch"
+
+[ -d "$directory" ] || mkdir -p "$directory"
+
+echo "$directory"
