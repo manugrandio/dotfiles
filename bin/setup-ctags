@@ -1,8 +1,7 @@
 #!/bin/bash
 # Setup ctags for a Python project
 
-# TODO: write the actual code, based on https://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
-# symlink files in project's `.git` to hooks in this git `dotfiles` repo
+# TODO fix
 
 ln ~/projects/dotfiles/git/hooks/ctags .git/hooks/ctags
 chmod +x .git/hooks/ctags
