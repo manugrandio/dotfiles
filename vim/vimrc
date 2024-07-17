@@ -45,7 +45,7 @@ set signcolumn=yes
 
 " File type settings
 filetype plugin on
-autocmd FileType python setlocal textwidth=100 tabstop=8 expandtab shiftwidth=4 softtabstop=4 cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+autocmd FileType python set sw=4 sts=4 et
 autocmd FileType javascript,typescript,typescriptreact setlocal shiftwidth=2 softtabstop=2 expandtab softtabstop=2
 autocmd FileType xml,html,htmldjango,css,scss setlocal shiftwidth=2 softtabstop=2 expandtab softtabstop=2
 
@@ -88,6 +88,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'vim-scripts/indentpython.vim'
 
 call plug#end()
 
