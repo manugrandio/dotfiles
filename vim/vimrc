@@ -60,9 +60,11 @@ nmap <Leader>l :Buffers<CR>
 nmap <Leader>d :Dash<CR>
 nmap <Leader>t :Tags!<CR>
 nmap <Leader>u :!python3 -m unittest %<CR>
+nmap <Leader>g :Git<CR>
 nmap <Leader>r :!python3 %<CR>
 nmap <Leader>j :%!python3 -m json.tool<CR>
 nmap <Leader>c :Rg! <C-R><C-W><CR>
+nmap <Leader>v :%!pandoc -f html -t markdown_github-raw_html<CR>
 
 " Initialize fzf.vim configuration dictionary
 let g:fzf_vim = {}
