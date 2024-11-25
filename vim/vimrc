@@ -46,7 +46,8 @@ set signcolumn=yes
 " File type settings
 filetype plugin on
 autocmd FileType python set sw=4 sts=4 et
-autocmd FileType javascript,typescript,typescriptreact setlocal shiftwidth=4 softtabstop=4 expandtab softtabstop=4
+" autocmd FileType javascript,typescript,typescriptreact setlocal shiftwidth=4 softtabstop=4 expandtab softtabstop=4
+autocmd FileType javascript,typescript,typescriptreact setlocal shiftwidth=4 softtabstop=4 noexpandtab softtabstop=4
 autocmd FileType xml,html,htmldjango,css,scss setlocal shiftwidth=2 softtabstop=2 expandtab softtabstop=2
 
 " Custom mappings
@@ -56,6 +57,7 @@ nnoremap Y y$
 nmap <Leader>p :FZF!<CR>
 nmap <Leader>f :Rg!<CR>
 nmap <Leader>g :G<CR>
+nmap <Leader>n :NERDTreeExplore<CR>
 nmap <Leader>l :Buffers<CR>
 nmap <Leader>d :Dash<CR>
 nmap <Leader>t :Tags!<CR>

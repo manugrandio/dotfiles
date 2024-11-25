@@ -39,3 +39,8 @@ export PYTHONSTARTUP=~/.pythonrc
 
 # In case you want to extend this base .bashrc
 [ -f ~/.bashrc_extended ] && source ~/.bashrc_extended
+
+# Untested (taken from Miguel)
+function gch() {
+    git checkout "$(git branch --all | fzf| tr -d '[:space:]')"
+}
