@@ -14,3 +14,4 @@ git clone https://github.com/tpope/vim-rhubarb.git
 git clone https://github.com/tpope/vim-tbone.git
 git clone https://github.com/hashivim/vim-terraform.git
 popd > /dev/null || exit
+vim -c :PlugInstall
