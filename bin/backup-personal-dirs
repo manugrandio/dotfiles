@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# TODO tweak before running!
+rsync -Pa --delete Documents/ /Volumes/Sandisk\ SSD/Documents/
+rsync -Pa --delete Libros/ /Volumes/Sandisk\ SSD/Libros/
+rsync -Pa --delete Music/Music\ \(mp3\)/ /Volumes/Sandisk\ SSD/Music\ \(mp3\)/
