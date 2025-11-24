@@ -1,7 +1,7 @@
+export LANG=en_US.UTF-8
 export EDITOR=vim
 export HISTSIZE=10000
 
-alias git='LANG=en_US git'
 alias dc='docker compose'
 # Don't use MacOS ctags. Use hombrew instead
 alias ctags='/opt/homebrew/bin/ctags'
@@ -34,8 +34,8 @@ export FZF_DEFAULT_OPTS='--layout=reverse'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# Set up Python shell (Manu)
-export PYTHONSTARTUP=~/.pythonrc
+# # Set up Python shell (Manu)
+# export PYTHONSTARTUP=~/.pythonrc
 
 # In case you want to extend this base .bashrc
 [ -f ~/.bashrc_extended ] && source ~/.bashrc_extended
