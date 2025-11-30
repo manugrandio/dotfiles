@@ -1,5 +1,9 @@
 #!/bin/bash
 # warning: untested
+# Before running this script remember to install git and brew with:
+#
+# $ xcode-select --install
+# $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # basictex installs pdflatex
 brew install --cask basictex
